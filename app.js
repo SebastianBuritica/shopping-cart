@@ -42,11 +42,21 @@ const addCarrito = e => {
     // console.log(e.target.classList.contains('btn-dark'))
     if(e.target.classList.contains('btn-dark')) {
         
-        console.log(e.target.parentElement)
+        setCarrito(e.target.parentElement)
     }
     e.stopPropagation()
 }
 
 const setCarrito = objeto => {
+    // console.log(objeto)
+    const producto = {
+        id: objeto.querySelector('.btn-dark').dataset.id,
+        title: objeto.querySelector('h5').textContent,
+        precio: objeto.querySelector('p').textContent,
+        cantidad: 1
+    }
 
+    if(carrito.hasOwnProperty(producto.id))
+
+    console.log(producto)
 }
