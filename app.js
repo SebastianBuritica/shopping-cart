@@ -53,7 +53,7 @@ const setCarrito = objeto => {
         id: objeto.querySelector('.btn-dark').dataset.id,
         title: objeto.querySelector('h5').textContent,
         precio: objeto.querySelector('p').textContent,
-        cantidad: 3
+        cantidad: 1
     }
 
     if(carrito.hasOwnProperty(producto.id))
