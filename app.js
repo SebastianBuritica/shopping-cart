@@ -56,7 +56,11 @@ const setCarrito = objeto => {
         cantidad: 1
     }
 
-    if(carrito.hasOwnProperty(producto.id))
+    if(carrito.hasOwnProperty(producto.id)) {
+        producto.cantidad = carrito[producto.id].cantidad + 1
+    }
+
+    carrito[producto.id] = {...producto}
 
     console.log(producto)
 }
